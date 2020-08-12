@@ -1,0 +1,23 @@
+import React from "react";
+
+import { NavLink } from 'react-router-dom'
+
+import {
+    Navbar,
+    Nav,
+} from "react-bootstrap";
+
+const Header = () => (
+    <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+                <NavLink to="/" activeClassName="active" className="nav-link">Posts</NavLink>
+                <NavLink to="/users" activeClassName="active" className="nav-link">Users</NavLink>
+            </Nav>
+        </Navbar.Collapse>
+    </Navbar>
+)
+
+export default Header;
